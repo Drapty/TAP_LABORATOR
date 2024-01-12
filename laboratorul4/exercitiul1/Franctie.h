@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#ifndef Fractie_lab4
+#define Fractie_lab4
 using namespace std;
 class Fractie {
 public:
@@ -17,11 +19,11 @@ public:
 
 	friend Fractie operator-(const Fractie&, const Fractie&);
 
-	Fractie operator*(Fractie&);//imultirea obiectul curent cu parametrul dat
-	Fractie operator/(Fractie&);//impartima obiectul curent cu parametrul dat
+	Fractie operator*(Fractie&);
+	Fractie operator/(Fractie&);
 	//friend Fractie operator/(const Fractie&,const Fractie&);
 	friend int cmmdc(int, int);
-	Fractie& operator*=(Fractie&);//NU poate fi freind intrucat schimba obiectul curent
+	Fractie& operator*=(Fractie&);
 	friend bool operator<(const Fractie&, const Fractie&);
 	friend bool operator>(const Fractie&,const Fractie&);
 	friend bool operator!=(const Fractie&,const Fractie&);
@@ -47,3 +49,4 @@ public:
 
 
 };
+#endif
